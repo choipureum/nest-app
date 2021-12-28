@@ -1,5 +1,14 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, Patch, Post, Put, Query } from '@nestjs/common';
-import { NotFoundError } from 'rxjs';
+import { 
+    Body, 
+    Controller, 
+    Delete, 
+    Get, 
+    Param, 
+    Patch, 
+    Post, 
+    Put, 
+    Query 
+} from '@nestjs/common';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { UpdateMovieDto } from './dto/update-movie.dto';
 import { Movie } from './entities/movie.entity';
@@ -25,7 +34,7 @@ export class MovieController {
         return this.movieService.createOne(movieData);
     }
 
-    @Delete()
+    @Delete("/:id")
     deleteOne(@Param('id') movieId: number){
         this.getOne(movieId);
         return this.movieService.deleteOne(movieId);

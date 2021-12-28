@@ -58,6 +58,14 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## hot-key
+```bash
+$ nest g s //서비스생성
+$ nest g co // 컨트롤러생성
+$ nest i class-validator class-transformer //유효성검사데코레이터
+$ npm i @nestjs/mapped-types // dto 변환을 도와줌
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
